@@ -29,7 +29,7 @@ function App() {
             <AppRedirects>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route detail ="/detail" element={<Detail/>} /> 
+                <Route detail ="/detail/:id" element={<Detail/>} /> 
                 <Route path="/login" element={<Login />} />
                 <Route path="/passwords/*" element={<PasswordsRoutes />} />
                 <Route path="/invites/*" element={<InvitesRoutes />} />
