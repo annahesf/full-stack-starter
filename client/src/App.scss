@@ -19,6 +19,18 @@ body {
   padding-top: 5rem;
 }
 
+.container-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  margin-bottom: 20px;
+  /* Add other styling as needed for your cards */
+}
+
 
 .endingRemark {
   font-size: 1.5rem;

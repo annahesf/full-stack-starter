@@ -2,8 +2,6 @@ import { useEffect, useState} from 'react'; //added
 import { Helmet } from 'react-helmet-async';
 import { useStaticContext } from './StaticContext';
 
-
-
 import Item from './Item'; //added
 
 
@@ -29,8 +27,19 @@ function Home() {
         <title>Home - {staticContext?.env?.VITE_SITE_TITLE ?? ''}</title>
       </Helmet>
       <main className="container">
-        <h1 className=''>Bay Area Restaurant Reviews</h1>
-        {data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Name} />)} 
+        <h1 className="HomePageTitle">Bay Area Restaurant Reviews</h1>
+        <div className="container-items">
+        {data?.records.map((record) => (
+            <Item
+              key={record.id}
+              id={record.id}
+              title={record.fields.Name}
+              rating={record.fields.Rating} // Pass the rating to the Item component
+              address={record.fields.Address}
+              description={record.fields.Description}
+            />
+          ))}
+        </div>
         <p class="endingRemark">Thanks for stopping by!</p>
       
       </main>
