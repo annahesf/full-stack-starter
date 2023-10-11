@@ -20,6 +20,8 @@ function Detail(){
     return (
     <main className="container">
         {/* <h1>Detail</h1> */}
+          {/* data &&= */}
+         {/*fields = */}
         <h1>{data?.fields.Name}</h1>
     </main>
     );

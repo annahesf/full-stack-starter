@@ -37,6 +37,7 @@ function Home() {
               rating={record.fields.Rating} // Pass the rating to the Item component
               address={record.fields.Address}
               description={record.fields.Description}
+              // image={record.fields.Image}
             />
           ))}
         </div>
