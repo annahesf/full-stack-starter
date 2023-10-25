@@ -1,0 +1,35 @@
+[
+    {
+        "model" : "Restaurant",
+        "data" : {
+            "id" : 10000,
+            "Name": "Test Restaurant 0",
+            "Rating" : 1 
+
+        }
+    },
+
+    {
+        "model" : "Restaurant",
+            "data" : {
+                "id" : 10001,
+                "Name": "Test Restaurant 1",
+                "Rating" : 2 
+
+        }
+    },
+
+
+    {
+        "model" : "Restaurant",
+            "data" : {
+                "id" : 10002,
+                "Name": "Test Restaurant 2",
+                "Rating" : 3 
+
+        }
+    }
+
+
+
+]
