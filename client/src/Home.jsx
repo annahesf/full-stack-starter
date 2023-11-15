@@ -8,11 +8,7 @@ import Item from './Item'; //added
 function Home() {
   const[data,setData] = useState(); //added
   useEffect( () => {
-    const token = 'pat1ShQoUT7Kinm8O.dfa6cc12ac6a940373c3586f5625ed778fac961d716be953c863932fc8947676'
-    const url = 'https://api.airtable.com/v0/appFMUE36vJvoAUrE/Restaurants?view=Grid%20view'
-    fetch(url, { 
-      headers: { Authorization: `Bearer ${token}`} 
-    })
+    fetch('/api/restaurant')
       .then((response) => response.json())
       .then((data) => setData(data))
   }, []);
@@ -29,19 +25,20 @@ function Home() {
       <main className="container">
         <h1 className="HomePageTitle">Bay Area Restaurant Reviews</h1>
         <div className="container-items">
-        {data?.records.map((record) => (
+        {data?.map((record) => (
             <Item
               key={record.id}
               id={record.id}
-              title={record.fields.Name}
-              rating={record.fields.Rating} // Pass the rating to the Item component
-              address={record.fields.Address}
-              description={record.fields.Description}
+              title={record.Name}
+              rating={record.Rating} // Pass the rating to the Item component
+              address={record.Address}
+              description={record.Description}
               // image={record.fields.Image}
             />
-          ))}
+          )
+          )}
         </div>
-        <p class="endingRemark">Thanks for stopping by!</p>
+        <p className="endingRemark">Thanks for stopping by!</p>
       
       </main>
     </>
